@@ -8,7 +8,8 @@ from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 
 #### Configuracion de la pagina web ####
 
-st.title("Asistente de Marketing virtual")
+#st.title("Asistente de Marketing virtual")
+st.title(":orange[Asistente de Marketing virtual]")
 
 st.image('logo_wavebi2.svg', width=200)
 
