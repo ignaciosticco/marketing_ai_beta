@@ -10,3 +10,5 @@ st.write("#### Respuesta:")
 
 loader = TextLoader("./prueba.txt", encoding='utf-8')
 text_documents = loader.load()
+
+st.write(text_documents)
