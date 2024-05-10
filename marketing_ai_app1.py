@@ -14,13 +14,7 @@ pregunta = st.text_input("Hacé tu pregunta")
 st.write("#### Respuesta:")
 
 loader = CSVLoader(file_path="./prueba2.csv")
-data_input = """
-Campaña,Impresiones, Clicks
-holamundo,20,12
-educaciondigitalquantica,20202,100
-"""
-
-#loader.load()
+data_input = loader.load()
 
 
 #### Configuracion de la cadena ####
@@ -35,16 +29,15 @@ Respondé las preguntas que te hacen basandote en el contexto. Si no podes respo
 Responde: "Necesito más información para responder esta pregunta.". 
 "
 
-Contexto: {context}
+Contexto: {data_input}
 
 Pregunta: {question}
 """
 
 prompt = ChatPromptTemplate.from_template(template)
-setup = RunnableParallel(context=data_input, question=RunnablePassthrough())
-chain = (
-    setup   
-    | prompt
+#setup = RunnableParallel(context=data_input, question=RunnablePassthrough())
+chain = ( 
+      prompt
     | model
     | parser
 )
