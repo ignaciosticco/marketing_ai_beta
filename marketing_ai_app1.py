@@ -13,9 +13,8 @@ st.write("#### Pregunta:")
 pregunta = st.text_input("Hacé tu pregunta")
 st.write("#### Respuesta:")
 
-loader = CSVLoader(file_path="./leads.csv")
+loader = CSVLoader(file_path="./leads2.csv")
 data_input = loader.load()
-
 
 #### Configuracion de la cadena ####
 model = ChatOpenAI(openai_api_key=st.secrets["OPENAI_API_KEY"], model="gpt-3.5-turbo")
@@ -35,7 +34,6 @@ Pregunta: {question}
 """
 
 prompt = ChatPromptTemplate.from_template(template)
-#prompt.format(context=data_input, question="Who is Mary's sister?")
 chain = prompt | model | parser
 
 
@@ -46,6 +44,5 @@ if pregunta:
     "context": data_input,
     "question": pregunta
 })
-    #chain.invoke(pregunta)
     st.write(response)
 
