@@ -14,7 +14,13 @@ pregunta = st.text_input("Hacé tu pregunta")
 st.write("#### Respuesta:")
 
 loader = CSVLoader(file_path="./prueba2.csv")
-data_input = loader.load()
+data_input = """
+Campaña,Impresiones, Clicks
+holamundo,20,12
+educaciondigitalquantica,20202,100
+"""
+
+#loader.load()
 
 
 #### Configuracion de la cadena ####
