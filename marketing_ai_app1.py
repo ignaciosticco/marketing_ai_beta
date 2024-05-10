@@ -9,11 +9,13 @@ from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 #### Configuracion de la pagina web ####
 
 st.title("Asistente de Marketing virtual")
+
+st.image('logo_wavebi.png', use_column_width=True)
 st.write("#### Pregunta:")
 pregunta = st.text_input("Hacé tu pregunta")
 st.write("#### Respuesta:")
 
-loader = CSVLoader(file_path="./leads2.csv")
+loader = CSVLoader(file_path="./leads.csv")
 data_input = loader.load()
 
 #### Configuracion de la cadena ####
