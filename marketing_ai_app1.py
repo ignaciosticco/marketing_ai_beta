@@ -1,5 +1,6 @@
 import streamlit as st
 from langchain_community.document_loaders import TextLoader
+from langchain_community.document_loaders.csv_loader import CSVLoader
 
 #### Configuracion de la pagina web ####
 
