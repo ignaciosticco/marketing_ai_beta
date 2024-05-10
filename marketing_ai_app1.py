@@ -29,7 +29,10 @@ Respondé las preguntas que te hacen basandote en el contexto. Si no podes respo
 Responde: "Necesito más información para responder esta pregunta.". 
 "
 
-Contexto: {data_input}
+Contexto: 
+Campaña,Impresiones, Clicks
+holamundo,20,12
+educaciondigitalquantica,20202,100
 
 Pregunta: {question}
 """
