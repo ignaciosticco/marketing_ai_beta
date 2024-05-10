@@ -13,7 +13,7 @@ st.write("#### Pregunta:")
 pregunta = st.text_input("Hacé tu pregunta")
 st.write("#### Respuesta:")
 
-loader = CSVLoader(file_path="./prueba2.csv")
+loader = CSVLoader(file_path="./leads.csv")
 data_input = loader.load()
 
 
