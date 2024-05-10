@@ -9,7 +9,8 @@ st.write("#### Pregunta:")
 pregunta = st.text_input("Hacé tu pregunta")
 st.write("#### Respuesta:")
 
-loader = TextLoader("./prueba.txt", encoding='utf-8')
-text_documents = loader.load()
+loader = CSVLoader(file_path="./prueba2.csv")
+data = loader.load()
 
-st.write(text_documents)
+
+st.write(data)
