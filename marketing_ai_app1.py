@@ -29,25 +29,23 @@ Respondé las preguntas que te hacen basandote en el contexto. Si no podes respo
 Responde: "Necesito más información para responder esta pregunta.". 
 "
 
-Contexto: 
-Campaña,Impresiones, Clicks
-holamundo,20,12
-educaciondigitalquantica,20202,100
+Contexto: {context}
 
 Pregunta: {question}
 """
 
 prompt = ChatPromptTemplate.from_template(template)
-#setup = RunnableParallel(context=data_input, question=RunnablePassthrough())
-chain = ( 
-      prompt
-    | model
-    | parser
-)
+#prompt.format(context=data_input, question="Who is Mary's sister?")
+chain = prompt | model | parser
+
 
 #### Correr el programa en el front ####
 
 if pregunta:
-    response = chain.invoke(pregunta)
+    response = chain.invoke({
+    "context": data_input,
+    "question": pregunta
+})
+    #chain.invoke(pregunta)
     st.write(response)
 
