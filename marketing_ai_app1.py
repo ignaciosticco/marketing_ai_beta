@@ -16,7 +16,7 @@ st.write("#### Respuesta:")
 loader = CSVLoader(file_path="./prueba2.csv")
 data_input = loader.load()
 
-
+'''
 #### Configuracion de la cadena ####
 model = ChatOpenAI(openai_api_key=st.secrets["OPENAI_API_KEY"], model="gpt-3.5-turbo")
 parser = StrOutputParser()
@@ -47,3 +47,5 @@ chain = (
 if pregunta:
     response = chain.invoke(pregunta)
     st.write(response)
+
+'''
