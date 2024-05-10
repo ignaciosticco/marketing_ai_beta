@@ -10,7 +10,7 @@ from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 
 st.title("Asistente de Marketing virtual")
 
-st.image('logo_wavebi.png', use_column_width=True)
+st.image('logo_wavebi.png', width=200)
 st.write("#### Pregunta:")
 pregunta = st.text_input("Hacé tu pregunta")
 st.write("#### Respuesta:")
