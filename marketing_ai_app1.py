@@ -11,6 +11,12 @@ from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 st.title("Asistente de Marketing virtual")
 
 st.image('logo_wavebi2.svg', width=200)
+
+st.write('Este chatbot se presenta como un asistente virtual especializado en marketing. \
+         Su función principal radica en la recopilación y análisis de datos provenientes de las campañas de \
+         marketing en curso. Los usuarios pueden formularle preguntas específicas con el fin de obtener \
+         conclusiones relevantes que contribuyan a comprender y optimizar el rendimiento de dichas campañas.')
+
 st.write("#### Pregunta:")
 pregunta = st.text_input("Hacé tu pregunta")
 st.write("#### Respuesta:")
