@@ -1,3 +1,5 @@
+# app: https://marketingaibeta-ov7eqxlsncowu2dymhz5gg.streamlit.app/
+
 import streamlit as st
 from langchain.prompts import ChatPromptTemplate
 from langchain_community.document_loaders import TextLoader
@@ -22,7 +24,7 @@ st.write("#### Pregunta:")
 pregunta = st.text_input("Hacé tu pregunta")
 st.write("#### Respuesta:")
 
-loader = CSVLoader(file_path="./leads.csv")
+loader = CSVLoader(file_path="./camapañas.csv")
 data_input = loader.load()
 
 #### Configuracion de la cadena ####
@@ -33,8 +35,8 @@ parser = StrOutputParser()
 template = """
 Sos un asistente de marketing digital. Vas a recibir un contexto que es un archivo csv con datos de marketing
 en forma tabular. 
-Respondé las preguntas que te hacen basandote en el contexto. Si no podes responder una pregunta. 
-Responde: "Necesito más información para responder esta pregunta.". 
+Respondé las preguntas que te hacen basandote en el contexto. Si no podes responder una pregunta,
+responde: "Necesito más información para responder esta pregunta.". 
 "
 
 Contexto: {context}
