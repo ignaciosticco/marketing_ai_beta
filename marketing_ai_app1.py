@@ -11,11 +11,11 @@ from langchain_openai.chat_models import ChatOpenAI
 
 st.title(":rainbow[Asistente de Marketing virtual]")
 
-col1, col2 = st.columns([2, 1])  # Adjust the ratio as needed
+col1, col2 = st.columns([1, 4])  # Adjust the ratio as needed
 with col1:
     st.write("Powered by")
 with col2:
-    st.image("logo_wavebi2.svg", width=100)
+    st.image("logo_wavebi2.svg", width=80)
 
 #st.write('Powered by')
 #st.image('logo_wavebi2.svg', width=100)
