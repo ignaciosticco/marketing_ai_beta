@@ -2,17 +2,16 @@
 
 import streamlit as st
 from langchain.prompts import ChatPromptTemplate
-#from langchain_community.document_loaders import TextLoader
 from langchain_community.document_loaders.csv_loader import CSVLoader
 from langchain_core.output_parsers import StrOutputParser
 from langchain_openai.chat_models import ChatOpenAI
-#from langchain_core.runnables import RunnableParallel, RunnablePassthrough
+
 
 #### Configuracion de la pagina web ####
 
-#st.title("Asistente de Marketing virtual")
 st.title(":rainbow[Asistente de Marketing virtual]")
 
+st.wrtite('Powered by')
 st.image('logo_wavebi2.svg', width=100)
 
 st.write('Este chatbot se presenta como un asistente virtual especializado en marketing. \
@@ -24,7 +23,7 @@ st.write("#### Pregunta:")
 pregunta = st.text_input("Hacé tu pregunta")
 st.write("#### Respuesta:")
 
-loader = CSVLoader(file_path="./camapañas.csv")
+loader = CSVLoader(file_path="./campañas_wavebi1.csv")
 data_input = loader.load()
 
 #### Configuracion de la cadena ####
