@@ -15,7 +15,7 @@ col1, col2 = st.columns([1, 6])  # Adjust the ratio as needed
 with col1:
     st.write("Powered by")
 with col2:
-    st.image("logo_wavebi2.svg", width=50)
+    st.image("logo_wavebi2.svg", width=100)
 
 #st.write('Powered by')
 #st.image('logo_wavebi2.svg', width=80)
