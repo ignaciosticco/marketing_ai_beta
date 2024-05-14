@@ -11,7 +11,7 @@ from langchain_openai.chat_models import ChatOpenAI
 
 st.title(":rainbow[Asistente de Marketing virtual]")
 
-st.wrtite('Powered by')
+st.write('Powered by')
 st.image('logo_wavebi2.svg', width=100)
 
 st.write('Este chatbot se presenta como un asistente virtual especializado en marketing. \
