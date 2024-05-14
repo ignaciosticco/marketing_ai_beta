@@ -11,8 +11,14 @@ from langchain_openai.chat_models import ChatOpenAI
 
 st.title(":rainbow[Asistente de Marketing virtual]")
 
-st.write('Powered by')
-st.image('logo_wavebi2.svg', width=100)
+col1, col2 = st.columns([1, 4])  # Adjust the ratio as needed
+with col1:
+    st.write("Powered by")
+with col2:
+    st.image("logo_wavebi2.svg", width=100)
+
+#st.write('Powered by')
+#st.image('logo_wavebi2.svg', width=100)
 
 st.write('Este chatbot se presenta como un asistente virtual especializado en marketing. \
          Su función principal radica en la recopilación y análisis de datos provenientes de las campañas de \
