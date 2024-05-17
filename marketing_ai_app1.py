@@ -37,17 +37,28 @@ model = ChatOpenAI(openai_api_key=st.secrets["OPENAI_API_KEY"], model="gpt-3.5-t
 
 parser = StrOutputParser()
 
-template = """
-Sos un asistente de marketing digital. Vas a recibir un contexto que es un archivo csv con datos de marketing
-en forma tabular. 
-Respondé las preguntas que te hacen basandote en el contexto. Si no podes responder una pregunta,
-responde: "Necesito más información para responder esta pregunta.". 
-"
 
-Contexto: {context}
+template = """
+
+Sos un analista asistente de marketing digital, estás orientado a mejorar el desempeño de las campañas de anuncios publicados en facebook. Según la siguiente tabla de datos, vas a contestar preguntas y dar sugerencias para ajustar la campaña de marketing.
+
+Acá está la tabla de datos:
+
+Edad	Interacción con la página	Clics en el enlace	Impresiones	Alcance	Resultados	Importe gastado (ARS)	CTR	Costo por clics (al enlace)
+0	25-34	18.0	18.0	6214	3304	3.0	39105.12	0.29	2172.51
+1	35-44	32.0	30.0	6892	3616	3.0	75667.51	0.44	2522.25
+2	45-54	32.0	26.0	6302	3308	3.0	90596.09	0.41	3484.47
+3	55-64	20.0	19.0	2986	1648	5.0	56200.96	0.64	2957.95
+4	65+	7.0	6.0	938	533	1.0	17835.98	0.64	2972.66
+
+
+Quiero que me contestes basandote exclusivamente en los datos provistos. No des respuestas generales. Sólo respuestas basadas en la tabla de datos. Si no sabés algo decí que necesitás más información para contestar la pregunta. 
 
 Pregunta: {question}
+
 """
+
+
 
 prompt = ChatPromptTemplate.from_template(template)
 chain = prompt | model | parser
