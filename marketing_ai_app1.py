@@ -46,28 +46,28 @@ Quiero que contestes las preguntas que te hacen basandote exclusivamente en las 
 
 Tabla de performance por sexo/género:
 
-Sexo	Clics en el enlace	Resultados	Importe gastado (ARS)	Costo por clics (al enlace)	CTR	Impresiones
-0	female	18.0	2.0	62766.73	3487.04	0.36	4993
-1	male	81.0	13.0	213272.51	2632.99	0.45	18084
+,campaign_name,gender,link_clicks,conversions,spend,cost_per_link_click,ctr,impressions
+0,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,female,22.0,3,71434.47,3247.02,0.39,5684
+1,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,male,91.0,13,242431.44,2664.08,0.44,20597
 
 
 Tabla de performace de las camapñas por edad:
 
-	Edad	Clics en el enlace	Resultados	Importe gastado (ARS)	Costo por clics (al enlace)	CTR	Impresiones
-0	25-34	18.0	3.0	39105.12	2172.51	0.29	6214
-1	35-44	30.0	3.0	75667.51	2522.25	0.44	6892
-2	45-54	26.0	3.0	90596.09	3484.47	0.41	6302
-3	55-64	19.0	5.0	56200.96	2957.95	0.64	2986
-4	65+	6.0	1.0	17835.98	2972.66	0.64	938
+,campaign_name,age,link_clicks,conversions,spend,cost_per_link_click,ctr,impressions
+0,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,25-34,20.0,3,45223.05,2261.15,0.28,7050
+1,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,35-44,33.0,3,85493.96,2590.73,0.43,7737
+2,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,45-54,29.0,4,104076.47,3588.84,0.4,7243
+3,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,55-64,22.0,5,62336.99,2833.5,0.64,3434
+4,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,65+,9.0,1,20472.33,2274.7,0.81,1105
 
 
 Tabla de performace de las camapñas por región geográfica:
 
-Región	Clics en el enlace	Resultados	Importe gastado (ARS)	Costo por clics (al enlace)	CTR	Impresiones
-0	Andalusia	60.0	7.0	156784.18	2613.07	0.41	14755
-1	Castilla-La Mancha	0.0	0.0	1500.50	NaN	0.00	108
-2	Cataluña	20.0	3.0	51770.62	2588.53	0.52	3824
-3	Comunidad de Madrid	19.0	5.0	69344.65	3649.72	0.41	4644 
+,campaign_name,region,link_clicks,conversions,spend,cost_per_link_click,ctr,impressions
+0,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,Andalusia,74.0,8,194992.29,2635.03,0.41,17993
+1,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,Castilla-La Mancha,,0,1500.43,,,108
+2,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,Cataluña,20.0,3,51768.3,2588.42,0.52,3824
+3,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,Comunidad de Madrid,19.0,5,69341.77,3649.57,0.41,4644
 
 Pregunta: {question}
 
