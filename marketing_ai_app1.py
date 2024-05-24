@@ -43,7 +43,7 @@ A continuación, hay 3 tablas con las métricas de la campaña de marketing. Una
 
 Quiero que contestes las preguntas que te hacen basandote exclusivamente en las tablas de datos provistas en este prompt. No des respuestas generales. Sólo respuestas basadas en la tabla de datos. Si no sabés algo, decí que necesitás más información para contestar la pregunta. Quiero que tus respuestas sean lo más breves posible. 
 
-
+{context}
 Tabla de performance por sexo/género:
 
 ,campaign_name,gender,link_clicks,conversions,spend,cost_per_link_click,ctr,impressions
@@ -81,9 +81,11 @@ chain = prompt | model | parser
 
 #### Correr el programa en el front ####
 
+data_input = 'Contesta lo justo y necesario.'
+
 if pregunta:
     response = chain.invoke({
-    #"context": data_input,
+    "context": data_input,
     "question": pregunta
 })
     st.write(response)
