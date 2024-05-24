@@ -90,6 +90,8 @@ if pregunta:
 })
     st.write(response)
 
-st.write("#### Template:")
-st.write(template)
+    st.write("#### Template:")
+    st.write(template)
+
+
 
