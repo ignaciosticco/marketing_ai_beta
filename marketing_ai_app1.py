@@ -43,13 +43,10 @@ A continuación, hay 3 tablas con las métricas de la campaña de marketing. Una
 
 Quiero que contestes las preguntas que te hacen basandote exclusivamente en las tablas de datos provistas en este prompt. No des respuestas generales. Sólo respuestas basadas en la tabla de datos. Si no sabés algo, decí que necesitás más información para contestar la pregunta. Quiero que tus respuestas sean lo más breves posible. 
 
-{context}
+
 Tabla de performance por sexo/género:
 
-,campaign_name,gender,link_clicks,conversions,spend,cost_per_link_click,ctr,impressions
-0,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,female,22.0,3,71434.47,3247.02,0.39,5684
-1,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,male,91.0,13,242431.44,2664.08,0.44,20597
-
+{context}
 
 Tabla de performace de las camapñas por edad:
 
@@ -73,15 +70,17 @@ Pregunta: {question}
 
 """
 
-
-
 prompt = ChatPromptTemplate.from_template(template)
 chain = prompt | model | parser
 
 
 #### Correr el programa en el front ####
 
-data_input = 'Contesta lo justo y necesario.'
+data_input = '''
+,campaign_name,gender,link_clicks,conversions,spend,cost_per_link_click,ctr,impressions
+0,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,female,22.0,3,71434.47,3247.02,0.39,5684
+1,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,male,91.0,13,242431.44,2664.08,0.44,20597
+'''
 
 if pregunta:
     response = chain.invoke({
@@ -89,9 +88,3 @@ if pregunta:
     "question": pregunta
 })
     st.write(response)
-
-    st.write("#### Template:")
-    st.write(template)
-
-
-
