@@ -73,14 +73,15 @@ Pregunta: {question}
 prompt = ChatPromptTemplate.from_template(template)
 chain = prompt | model | parser
 
+with open('output_gender.txt', 'r', encoding='utf-8') as file:
+    content = file.read()
+
+
 
 #### Correr el programa en el front ####
 
-data_input = '''
-,campaign_name,gender,link_clicks,conversions,spend,cost_per_link_click,ctr,impressions
-0,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,female,22.0,3,71434.47,3247.02,0.39,5684
-1,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,male,91.0,13,242431.44,2664.08,0.44,20596
-'''
+
+data_input = content
 
 if pregunta:
     response = chain.invoke({
