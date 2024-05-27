@@ -4,8 +4,6 @@ Este script le pega a la api de fb, y formatea los datos para que consuma el cha
 IMPORTANTE: cambiar el token y el campaing_id segun sea necesario
 
 '''
-
-
 import requests
 import pandas as pd
 
@@ -75,9 +73,8 @@ def crea_nuevas_metricas(df):
 
 def main():
 
-
     # PARAMETERS
-    token =  ""
+    token =  "EAAbcF9JKPTkBO0rcYg2BnS4zRe2ZBwShkuiMqoXKgLRYUZBEeW1QSGfkvInuU8j7rWZBbjr8LVOPo4sT3vPwditm7dC3pXaNtDiZCL7JmaSCchqEJ9NJbPZB2T5lix1nhF5o9sF5zwjQWKTKljBB7oJxwT6UJBmCcZCp71yUfwfhYFL7ykIIO9CvsB35hWXvvkRJlfh1iylrKTC8oZD"
     campaing_id = "120207306882740766"
 
     ################### Desglose por genero ###################
@@ -95,7 +92,7 @@ def main():
     column_order = ['campaign_name', 'gender', 'link_clicks', 'conversions','spend', 'cost_per_link_click', 'ctr', 'impressions']
     df_gender = df_gender.reindex(columns=column_order)
     # Imprimo el dataframe
-    df_gender.to_csv('output_gender.txt',sep = ',')
+    df_gender.to_csv('data_gender.txt',sep = ',')
 
 
     ################### Desglose por edad ###################
@@ -111,7 +108,7 @@ def main():
     column_order = ['campaign_name', 'age', 'link_clicks', 'conversions','spend', 'cost_per_link_click', 'ctr', 'impressions']
     df_age = df_age.reindex(columns=column_order)
     # Imprimo el dataframe
-    df_age.to_csv('output_age.txt',sep = ',')
+    df_age.to_csv('data_age.txt',sep = ',')
 
 
     ################### Desglose por region ###################
@@ -128,7 +125,7 @@ def main():
     column_order = ['campaign_name', 'region', 'link_clicks', 'conversions','spend', 'cost_per_link_click', 'ctr', 'impressions']
     df_region = df_region.reindex(columns=column_order)
     # Imprimo el dataframe
-    df_region.to_csv('output_region.txt',sep = ',')
+    df_region.to_csv('data_region.txt',sep = ',')
 
 
 if __name__ == "__main__":
