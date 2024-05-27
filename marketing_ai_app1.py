@@ -31,7 +31,7 @@ st.write("#### Respuesta:")
 with open('data_gender.txt', 'r', encoding='utf-8') as file:
     data_input_1 = file.read()
 
-with open('data_edad.txt', 'r', encoding='utf-8') as file:
+with open('data_age.txt', 'r', encoding='utf-8') as file:
     data_input_2 = file.read()
 
 with open('data_region.txt', 'r', encoding='utf-8') as file:
