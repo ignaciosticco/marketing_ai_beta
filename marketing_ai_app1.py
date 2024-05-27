@@ -31,8 +31,11 @@ st.write("#### Respuesta:")
 with open('data_gender.txt', 'r', encoding='utf-8') as file:
     data_input_1 = file.read()
 
-with open('data_gender.txt', 'r', encoding='utf-8') as file:
+with open('data_edad.txt', 'r', encoding='utf-8') as file:
     data_input_2 = file.read()
+
+with open('data_region.txt', 'r', encoding='utf-8') as file:
+    data_input_3 = file.read()
 
 
 #### Configuracion de la cadena ####
@@ -51,17 +54,11 @@ Quiero que contestes las preguntas que te hacen basandote exclusivamente en las 
 
 Tabla de performance por sexo/género:
 
-{context}
+{context_1}
 
 Tabla de performace de las camapñas por edad:
 
-,campaign_name,age,link_clicks,conversions,spend,cost_per_link_click,ctr,impressions
-0,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,25-34,20.0,3,45223.05,2261.15,0.28,7050
-1,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,35-44,33.0,3,85493.96,2590.73,0.43,7737
-2,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,45-54,29.0,4,104076.47,3588.84,0.4,7243
-3,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,55-64,22.0,5,62336.99,2833.5,0.64,3434
-4,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,65+,9.0,1,20472.33,2274.7,0.81,1105
-
+{context_2}
 
 Tabla de performace de las camapñas por región geográfica:
 
@@ -82,7 +79,8 @@ chain = prompt | model | parser
 
 if pregunta:
     response = chain.invoke({
-    "context": data_input_1,
+    "context_1": data_input_1,
+    "context_2": data_input_2,
     "question": pregunta
 })
     st.write(response)
