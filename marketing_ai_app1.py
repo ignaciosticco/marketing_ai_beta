@@ -26,14 +26,19 @@ st.write("#### Pregunta:")
 pregunta = st.text_input("Hacé tu pregunta")
 st.write("#### Respuesta:")
 
-loader = CSVLoader(file_path="./campañas_wavebi1.csv")
-data_input = loader.load()
+### Importacion de datos de campaña ###
+
+with open('data_gender.txt', 'r', encoding='utf-8') as file:
+    data_input_1 = file.read()
+
+with open('data_gender.txt', 'r', encoding='utf-8') as file:
+    data_input_2 = file.read()
+
 
 #### Configuracion de la cadena ####
 model = ChatOpenAI(openai_api_key=st.secrets["OPENAI_API_KEY"], model="gpt-3.5-turbo")
 
 parser = StrOutputParser()
-
 
 template = """
 
@@ -73,15 +78,7 @@ Pregunta: {question}
 prompt = ChatPromptTemplate.from_template(template)
 chain = prompt | model | parser
 
-with open('output_gender.txt', 'r', encoding='utf-8') as file:
-    data_input_1 = file.read()
-
-
-
 #### Correr el programa en el front ####
-
-
-#data_input = content
 
 if pregunta:
     response = chain.invoke({
