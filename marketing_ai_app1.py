@@ -74,18 +74,18 @@ prompt = ChatPromptTemplate.from_template(template)
 chain = prompt | model | parser
 
 with open('output_gender.txt', 'r', encoding='utf-8') as file:
-    content = file.read()
+    data_input_1 = file.read()
 
 
 
 #### Correr el programa en el front ####
 
 
-data_input = content
+#data_input = content
 
 if pregunta:
     response = chain.invoke({
-    "context": data_input,
+    "context": data_input_1,
     "question": pregunta
 })
     st.write(response)
