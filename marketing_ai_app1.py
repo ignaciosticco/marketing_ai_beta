@@ -45,7 +45,7 @@ parser = StrOutputParser()
 
 template = """
 
-Hora: 4:15
+Hora: 4:18
 
 Sos un analista asistente de marketing digital, estás orientado a mejorar el desempeño de las campañas de anuncios publicados en facebook. Según las siguiente tabla de datos, vas a contestar preguntas y dar sugerencias para ajustar las campañas de marketing online.
 
