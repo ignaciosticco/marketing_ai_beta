@@ -45,6 +45,8 @@ parser = StrOutputParser()
 
 template = """
 
+Hora: 4:15
+
 Sos un analista asistente de marketing digital, estás orientado a mejorar el desempeño de las campañas de anuncios publicados en facebook. Según las siguiente tabla de datos, vas a contestar preguntas y dar sugerencias para ajustar las campañas de marketing online.
 
 A continuación, hay 3 tablas con las métricas de la campaña de marketing. Una tabla contiene la información de rendimiendo desglosado por sexo, otra por grupos etarios y la tercera por regiones geográficas.
