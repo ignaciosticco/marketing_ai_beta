@@ -5,7 +5,7 @@ from langchain.prompts import ChatPromptTemplate
 from langchain_community.document_loaders.csv_loader import CSVLoader
 from langchain_core.output_parsers import StrOutputParser
 from langchain_openai.chat_models import ChatOpenAI
-
+import datetime
 
 #### Configuracion de la pagina web ####
 
@@ -43,9 +43,11 @@ model = ChatOpenAI(openai_api_key=st.secrets["OPENAI_API_KEY"], model="gpt-3.5-t
 
 parser = StrOutputParser()
 
+hora_update = datetime.datetime.now()
+
 template = """
 
-Hora: 4:18
+Hora de actualización: {context_4}
 
 Sos un analista asistente de marketing digital, estás orientado a mejorar el desempeño de las campañas de anuncios publicados en facebook. Según las siguiente tabla de datos, vas a contestar preguntas y dar sugerencias para ajustar las campañas de marketing online.
 
@@ -80,6 +82,7 @@ if pregunta:
     "context_1": data_input_1,
     "context_2": data_input_2,
     "context_3": data_input_3,
+    "context_4": hora_update,
     "question": pregunta
 })
     st.write(response)
