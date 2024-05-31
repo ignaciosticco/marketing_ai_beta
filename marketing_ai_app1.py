@@ -43,7 +43,8 @@ model = ChatOpenAI(openai_api_key=st.secrets["OPENAI_API_KEY"], model="gpt-3.5-t
 
 parser = StrOutputParser()
 
-hora_update = datetime.datetime.now()
+
+hora_update = datetime.datetime.now() 
 
 template = """
 
