@@ -2,4 +2,4 @@
 0,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,Andalusia,74.0,8,194992.29,2635.03,0.41,17993
 1,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,Castilla-La Mancha,,0,1500.43,,,108
 2,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,Cataluña,20.0,3,51768.3,2588.42,0.52,3824
-3,Consultoría Despachos prof - ES - IA (Fuengirola y Alrededores) Campaña,Comunidad de Madrid,19.0,5,69341.77,3649.57,0.41,4644
+3,Consultoría Despacho prof - ES - IA (Fuengirola y Alrededores) Campaña,Comunidad de Madrid,19.0,5,69341.77,3649.57,0.41,4643
