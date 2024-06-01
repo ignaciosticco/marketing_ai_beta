@@ -44,7 +44,6 @@ with open('data_region.txt', 'r', encoding='utf-8') as file:
 #### Configuracion de la cadena ####
 model = ChatOpenAI(openai_api_key=st.secrets["OPENAI_API_KEY"], model="gpt-3.5-turbo")
 parser = StrOutputParser()
-hora_update = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 template = """
 
