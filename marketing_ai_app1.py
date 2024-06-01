@@ -28,6 +28,9 @@ st.write("#### Respuesta:")
 
 ### Importacion de datos de campaña ###
 
+with open('time_update.txt', 'r', encoding='utf-8') as file:
+    data_input_0 = file.read()
+
 with open('data_gender.txt', 'r', encoding='utf-8') as file:
     data_input_1 = file.read()
 
@@ -45,7 +48,7 @@ hora_update = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 template = """
 
-Hora de actualización: {context_4}
+Hora de actualización: {context_0}
 
 Sos un analista asistente de marketing digital, estás orientado a mejorar el desempeño de las campañas de anuncios publicados en facebook. Según las siguiente tabla de datos, vas a contestar preguntas y dar sugerencias para ajustar las campañas de marketing online.
 
@@ -77,10 +80,10 @@ chain = prompt | model | parser
 
 if pregunta:
     response = chain.invoke({
+    "context_0": data_input_0,
     "context_1": data_input_1,
     "context_2": data_input_2,
     "context_3": data_input_3,
-    "context_4": hora_update,
     "question": pregunta
 })
     st.write(response)
